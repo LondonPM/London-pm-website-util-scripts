@@ -14,7 +14,7 @@ my $json_str = encode( 'UTF-8',read_text( shift ) );
 my $data     = decode_json( $json_str );
 
 my @tech_meetings = reverse
-    grep { $_->{name} =~ /technical meeting/i }
+    grep { $_->{name} =~ /tech/i }
     @{ $data };
 
 my $i = 1;
